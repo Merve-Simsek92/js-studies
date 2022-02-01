@@ -176,12 +176,71 @@
 
 // minMax([1]) ➞ [1, 1]
 
-    function sortArray(list){
-        list.sort(function(x,y){
-             return x-y;
-         });
-         console.log(list);
-     }
-console.lo
+//     function sortArray(list){
+//         list.sort(function(x,y){
+//              return x-y;
+//          })
+         
+//          console.log([list[0],list[list.length-1]]);
+//      }
+// console.log(sortArray([1]));
+
+// let student="merve";
+// function sayHi(studentname){
+//     console.log(`welcome ${studentname}`);
+// }
+// console.log(sayHi(student));
 
 
+// let students=["john","jane","joe"];
+// function sayHi(student) {
+//     console.log(`welcome ${student}`)
+    
+// }
+// for(let i=0;i<students.length;i++){
+//     sayHi(students[i])
+// }
+
+// function sum(){
+//     let add=0;
+//     console.log(arguments);
+//     console.log(arguments.length);
+//     for(let i=0;i<arguments.length; i++){
+//         add+=arguments[i]
+//     }
+//     return add;
+
+// }
+// console.log(sum(1,3,2,5,6))
+
+// function sum1(a,...args){
+//     console.log(a);
+//     console.log(args);
+//     let sum=0;
+//     for(let i=0;i<args.length;i++){
+//     sum+=a*args[i]}
+//     return sum;
+// }
+// console.log(sum1(0.5,4,5,6,7,45,65))
+
+// function div2(num2,num1){
+//     return num2 ? num1/num2 : "zero division error!"
+// }
+// //recursive function 
+// function pascalnumber(n){
+// sum=0
+// if(n==1){
+//     return 1;
+// }return n+pascalnumber(n-1);
+// }
+// console.log(pascalnumber(7));
+
+// //fuction expression
+// let toplam=function (a){return a+100}
+
+// let top = (a)=>{
+//     return a+100
+// }
+
+
+ console.log(3<12)
