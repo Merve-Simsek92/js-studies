@@ -243,4 +243,9 @@
 // }
 
 
- console.log(3<12)
+const plusTwo = makePlusFunction(2)
+const plusFive = makePlusFunction(5)
+const plusSeven = makePlusFunction(plusTwo(plusFive(0)))
+const plusTen = makePlusFunction(10)
+
+
