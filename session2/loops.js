@@ -243,9 +243,168 @@
 // }
 
 
-const plusTwo = makePlusFunction(2)
-const plusFive = makePlusFunction(5)
-const plusSeven = makePlusFunction(plusTwo(plusFive(0)))
-const plusTen = makePlusFunction(10)
+// const plusTwo = makePlusFunction(2)
+// const plusFive = makePlusFunction(5)
+// const plusSeven = makePlusFunction(plusTwo(plusFive(0)))
+// const plusTen = makePlusFunction(10)
 
 
+// Your task is to create a Circle constructor that creates a circle with a radius provided by an argument. The circles constructed must have two methods getArea() (PI*r^2) and getPerimeter() (2*PI*r) which give both respective areas and perimeter (circumference).
+
+// For help with this class, I have provided you with a Rectangle constructor which you can use as a base example.
+
+// Examples
+// let circy = new Circle(11)
+// circy.getArea()
+
+// // Should return 380.132711084365
+// let circy = new Circle(4.44)
+// circy.getPerimeter()
+
+// // Should return 27.897342763877365
+
+// function getArea(n){
+// return Math.PI*n**2}
+// console.log(getArea(11))
+// function getPerimeter(n){
+//     return Math.PI*2*n
+// }
+// console.log(getPerimeter(4.44))
+// Create a function that returns true if the first array can be nested inside the second.
+
+// arr1 can be nested inside arr2 if:
+
+// arr1's min is greater than arr2's min.
+// arr1's max is less than arr2's max.
+// Examples
+// canNest([1, 2, 3, 4], [0, 6]) ➞ true
+
+// canNest([3, 1], [4, 0]) ➞ true
+
+// canNest([9, 9, 8], [8, 9]) ➞ false
+
+// canNest([1, 2, 3, 4], [2, 3]) ➞ false
+
+function canNest(l1,l2){
+    
+l1.sort(function(x,y){
+    return x-y;
+})
+l2.sort(function(x,y){
+    return x-y;
+})
+
+if((l1[0]>l2[0]) && (l1[l1.length-1]<l2[l2.length-1])){
+return true}
+else{
+    return false
+}}
+
+console.log(canNest([1, 2, 3, 4], [2, 3]))
+console.log(canNest([3, 1], [4, 0]))
+console.log( canNest([1, 2, 3, 4], [0, 6]))
+
+
+
+
+
+
+
+
+
+
+// const REGEXP = /blue|red/
+
+// "red flag".match(REGEXP)  // red
+// "blue flag".match(REGEXP)  // blue
+
+// // Matches "blue" in "blue flag" and "red" in "red flag".
+// Create a regular expression to match all red flag and blue flag in a string. You must use | in your expression. Flags can come in any order.
+
+// Examples
+// "red flag blue flag".match(REGEXP) ➞ ["red flag", "blue flag"]
+
+// "yellow flag red flag blue flag green flag".match(REGEXP) ➞ ["red flag", "blue flag"]
+
+// "pink flag red flag black flag blue flag green flag red flag ".match(REGEXP) ➞ ["red flag", "blue flag", "red flag"]
+// Notes
+// Check the Resources tab if you get stuck.
+
+// The time has a format: hours:minutes. Both hours and minutes has two digits, like 09:00.
+
+// Make a regexp to find time in the string: Breakfast at 09:00 in the room 123:456. In this task there’s no need to check time correctness yet, so 25:99 can also be a valid result. The regexp should not match 123:456.
+
+//
+
+// function  redblue(str){
+//     result=[]
+// if(str.includes("blue flag")==true){
+//     result.push("blue flag");
+// }if(str.includes("red flag")==true){
+//     result.push("red flag");}
+
+// return result;
+// }
+// console.log(redblue("yellow flag red flag blue flag green flag"));
+
+
+
+
+// Given a string s, find the length of the longest substring without repeating characters.
+
+ 
+
+// Example 1:
+
+// Input: s = "abcabcbb"
+// Output: 3
+// Explanation: The answer is "abc", with the length of 3.
+// Example 2:
+
+// Input: s = "bbbbb"
+// Output: 1
+// Explanation: The answer is "b", with the length of 1.
+
+
+// if(s.length <= 1) return s.length;
+
+// let left = 0, right = 0, maxLen = 0;
+// let seenChars = new Map();
+
+// while(right < s.length){
+    
+//     if(!seenChars.has(s[right])){
+        
+//         seenChars.set(s[right], right);
+        
+//         maxLen = Math.max(maxLen, (right - left + 1));
+//     }else{
+        
+//         if(seenChars.get(s[right]) + 1 > left){
+//             left = seenChars.get(s[right]) + 1;
+//         }
+        
+//         if(seenChars.get(s[right]) < left) {
+//             seenChars.set(s[right], right);
+//             maxLen = Math.max(maxLen, (right - left + 1));
+//         }
+        
+//     }
+//     right++;
+// }
+// return maxLen;
+// };
+
+function sevenBoom(liste){
+    result=""
+    reversed=[]
+    for(let i of liste){
+        result+=i}
+    if(result.includes("7")==true)
+    {return "BOOOM";}
+    else{
+        return "there is not seven"
+    }
+}
+
+console.log(sevenBoom([1,27,5,78,8,45]))
