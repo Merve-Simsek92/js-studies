@@ -285,25 +285,52 @@
 
 // canNest([1, 2, 3, 4], [2, 3]) ➞ false
 
-function canNest(l1,l2){
+// // function canNest(l1,l2){
     
-l1.sort(function(x,y){
-    return x-y;
-})
-l2.sort(function(x,y){
-    return x-y;
-})
+// // l1.sort(function(x,y){
+// //     return x-y;
+// // })
+// // l2.sort(function(x,y){
+// //     return x-y;
+// // })
 
-if((l1[0]>l2[0]) && (l1[l1.length-1]<l2[l2.length-1])){
-return true}
-else{
-    return false
-}}
+// // if((l1[0]>l2[0]) && (l1[l1.length-1]<l2[l2.length-1])){
+// // return true}
+// // else{
+// //     return false
+// // }}
 
-console.log(canNest([1, 2, 3, 4], [2, 3]))
-console.log(canNest([3, 1], [4, 0]))
-console.log( canNest([1, 2, 3, 4], [0, 6]))
+// // console.log(canNest([1, 2, 3, 4], [2, 3]))
+// // console.log(canNest([3, 1], [4, 0]))
+// // console.log( canNest([1, 2, 3, 4], [0, 6]))
 
+
+// // var s = "Lorem Ipsum is simply dummy text of the printing and 'printing' typesetting industry.";
+
+// // console.log(s.replace("dummy","hello"));
+
+// // console.log(s.replace(/Dummy/i,"hello")) //regex /////  ile case sensitive i açma
+
+// // console.log(s.replace(/e/g,"a"))
+
+// // //search
+// // var s = "Lorem Ipsum is simply dummy text of the printing and 'printing' typesetting industry.";
+// // console.log(s.search(/Text/i));
+// // console.log(s.indexOf(/text/i));
+
+// // //slice()
+
+// // var s = "Lorem Ipsum is simply dummy text of the printing and 'printing' typesetting industry.";
+
+// // console.log(s.slice(0,5));
+// // console.log(s.slice(6));
+
+// // console.log(s.slice(12,-10));
+// // console.log(s.split())
+
+
+// // console.log(s.substr(22,5))
+// // console.log(s.substring(22,0))
 
 
 
@@ -395,16 +422,206 @@ console.log( canNest([1, 2, 3, 4], [0, 6]))
 // return maxLen;
 // };
 
-function sevenBoom(liste){
-    result=""
-    reversed=[]
-    for(let i of liste){
-        result+=i}
-    if(result.includes("7")==true)
-    {return "BOOOM";}
-    else{
-        return "there is not seven"
-    }
-}
+// function sevenBoom(liste){
+//     result=""
+//     reversed=[]
+//     for(let i of liste){
+//         result+=i}
+//     if(result.includes("7")==true)
+//     {return "BOOOM";}
+//     else{
+//         return "there is not seven"
+//     }
+// }
 
-console.log(sevenBoom([1,27,5,78,8,45]))
+// console.log(sevenBoom([1,27,5,78,8,45]))
+
+// var pangram = "pijamalı hasta yağız şoföre çabucak güvendi"
+// console.log(pangram.toLocaleUpperCase("tr-TR"))
+// console.log(pangram.toUpperCase())
+// var s="       welcome   \t to clarusway    "
+// console.log(s.trim())
+
+
+// var cars=["opel","audi",[1,2,true],"bmw"]
+// console.log(cars);
+// var cars2=Array.of("opel","audi")
+// console.log(cars2)
+// var cars3=new Array("opel","bmw")
+// console.log(cars3);
+// console.log(cars[0])
+// console.log(cars[2][2])
+// console.log(Array.isArray(cars));
+// console.log(cars instanceof Array);
+
+// //length
+// /* const fruits = ["Banana", "Orange", "Apple"];
+// // fruits[6] = "Lemon";
+
+// console.log(fruits)
+// console.log(fruits.length)
+//  */
+
+// const fruits = ["Banana", "Orange","Lemon"];
+// const vegetables = ['Broccoli','Celery','Parsley','Artichoke']
+
+// console.log(fruits.concat(vegetables));
+// console.log(fruits.concat("fig","pear"));
+// console.log(" "+fruits)
+// console.log(fruits.toString());
+// console.log(fruits+vegetables);
+
+// const daltones = ['Joe','Jack','William','Avarel']
+// console.log(daltones.sort());
+
+
+// var num=[3,4,34,23,54]
+// console.log(num.sort((a,b)=> a-b));
+
+// var pangram = "pijamalı hasta yağız şoföre çabucak güvendi"
+// console.log(pangram.toLocaleUpperCase("tr-TR"))
+// console.log(pangram.toUpperCase())
+// var s="       welcome   \t to clarusway    "
+// console.log(s.trim())
+
+
+// var cars=["opel","audi",[1,2,true],"bmw"]
+// console.log(cars);
+// var cars2=Array.of("opel","audi")
+// console.log(cars2)
+// var cars3=new Array("opel","bmw")
+// console.log(cars3);
+// console.log(cars[0])
+// console.log(cars[2][2])
+// console.log(Array.isArray(cars));
+// console.log(cars instanceof Array);
+
+//length
+/* const fruits = ["Banana", "Orange", "Apple"];
+// fruits[6] = "Lemon";
+
+console.log(fruits)
+console.log(fruits.length)
+ */
+
+// const fruits = ["Banana", "Orange","Lemon"];
+// const vegetables = ['Broccoli','Celery','Parsley','Artichoke']
+
+// console.log(fruits.concat(vegetables));
+// console.log(fruits.concat("fig","pear"));
+// console.log(" "+fruits)
+// console.log(fruits.toString());
+// console.log(fruits+vegetables);
+
+// const daltones = ['Joe','Jack','William','Avarel']
+// console.log(daltones.sort());
+
+
+// var num=[3,4,34,23,54]
+// console.log(num.sort((a,b)=> a-b));
+
+// Write a function that converts an object into an array, where each element represents a key-value pair in the form of an array.
+
+// Examples
+// toArray({ a: 1, b: 2 }) ➞ [["a", 1], ["b", 2]]
+
+// toArray({ shrimp: 15, tots: 12 }) ➞ [["shrimp", 15], ["tots", 12]]
+
+// toArray({}) ➞ []
+
+// function toArray(...arg){
+//     result=[];
+//     for(let i of arg){
+//     result.push([i[key],i[value]) }
+//     return result
+// }
+// console.log(toArray({ a: 1, b: 3}));
+
+// minMax([1, 2, 3, 4, 5]) ➞ [1, 5]
+
+// minMax([2334454, 5]) ➞ [5, 2334454]
+
+// minMax([1]) ➞ [1,1] 
+
+// function minMax(liste){
+//     liste.sort((a,b)=> a-b);
+//     return [liste[0],liste[(liste.length-1)]];
+// }
+// console.log(minMax([1, 2, 3, 4, 5]));
+
+// Create a function that takes an array of strings and returns an array with only the strings that have numbers in them. If there are no strings containing numbers, return an empty array.
+
+// Examples
+// numInStr(["1a", "a", "2b", "b"]) ➞ ["1a", "2b"]
+
+// numInStr(["abc", "abc10"]) ➞ ["abc10"]
+
+// numInStr(["abc", "ab10c", "a10bc", "bcd"]) ➞ ["ab10c", "a10bc"]
+
+// numInStr(["this is a test", "test1"]) ➞ ["test1"]
+
+
+//  function numIntStr(liste){
+//      result=[];
+//      for(let i of liste){
+//          if( i.match(/[1-9]/i) != null)
+//           result.push(i)}
+//           return result}
+        
+ 
+// console.log(["abc", "ab10c", "a10bc", "bcd"]);
+
+// function numIntStr(liste){
+    
+//     for(let i of liste){
+//          i.match(/[1-9][a-z]/) }
+    
+// }
+// console.log(["abc", "ab10c", "a10bc", "bcd"]);
+
+// Create a function that determines whether a number is Oddish or Evenish. A number is Oddish if the sum of all of its digits is odd, and a number is Evenish if the sum of all of its digits is even. If a number is Oddish, return "Oddish". Otherwise, return "Evenish".
+
+// For example, oddishOrEvenish(121) should return "Evenish", since 1 + 2 + 1 = 4. oddishOrEvenish(41) should return "Oddish", since 4 + 1 = 5.
+
+// Examples
+// oddishOrEvenish(43) ➞ "Oddish"
+// // 4 + 3 = 7
+// // 7 % 2 = 1
+
+// oddishOrEvenish(373) ➞ "Oddish"
+// // 3 + 7 + 3 = 13
+// // 13 % 2 = 1
+
+// oddishOrEvenish(4433) ➞ "Evenish"
+// // 4 + 4 + 3 + 3 = 14
+// // 14 % 2 = 0
+
+
+// function  oddishOrEvenish(n){
+//     sum=0;
+//     for(let i of n.toString()) 
+//         {sum+=Number(i)
+//     }
+
+//     if(sum%2 ==0 ){
+//         return "Evenish"
+//     }else{
+//         return "Oddish"
+//     }
+// }
+// console.log(oddishOrEvenish(373))
+// console.log(oddishOrEvenish(4433))
+// Create a function that calculates the number of different squares in an n * n square grid. Check the Resources tab.
+
+// Examples
+// numberSquares(2) ➞ 5
+
+// numberSquares(4) ➞ 30
+
+// numberSquares(5) ➞ 55
+// Explanation
+// If n = 0 then the number of squares is 0
+// If n = 1 then the number of squares is 1 + 0 = 1
+// If n = 2 then the number of squares is 2^2 + 1 = 4 + 1 = 5
+// If n = 3 then the number of squares is 3^2 + 5 = 9 + 5 = 14
+// As you can see, for each value of n the number of squares is n squared + the number of squares from the previous value of n.
