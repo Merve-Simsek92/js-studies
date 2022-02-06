@@ -625,3 +625,123 @@ console.log(fruits.length)
 // If n = 2 then the number of squares is 2^2 + 1 = 4 + 1 = 5
 // If n = 3 then the number of squares is 3^2 + 5 = 9 + 5 = 14
 // As you can see, for each value of n the number of squares is n squared + the number of squares from the previous value of n.
+
+// function FirstReverse(str) { 
+//     s=str.split("").reverse().join("")
+//      // code goes here  
+//      return s; 
+   
+//    }
+      
+//    // keep this function call here 
+//    console.log(FirstReverse("merhaba"));
+
+
+
+//    function TreeConstructor(strArr) { 
+//     let child = {};
+//     let parent = {};
+//     for (let i = 0; i < strArr.length; i++){
+//         let str = strArr[i].split('');
+//         str.pop();
+//         str.shift();
+//         let pair = str.join('').replace(", ", ",").split(',');
+//         child[pair[0]] = (child[pair[0]] || 0) + 1;
+//         if (child[pair[0]] > 1) return false;
+//         parent[pair[1]] = (parent[pair[1]] || 0) + 1;
+//         if (parent[pair[1]] > 2) return false;
+//     }
+//     return true; 
+// }
+   
+// TreeConstructor(readline());
+// Have the function TreeConstructor(strArr) take the array of strings stored in strArr, which will contain pairs of integers in the following format: (i1,i2), where i1 represents a child node in a tree and the second integer i2 signifies that it is the parent of i1. For example: if strArr is ["(1,2)", "(2,4)", "(7,2)"], then this forms the following tree:
+
+
+
+// which you can see forms a proper binary tree. Your program should, in this case, return the string true because a valid binary tree can be formed. If a proper binary tree cannot be formed with the integer pairs, then return the string false. All of the integers within the tree will be unique, which means there can only be one node in the tree with the given integer value.
+// Examples
+// Input: ["(1,2)", "(2,4)", "(5,7)", "(7,2)", "(9,5)"]
+// Output: true
+// Input: ["(1,2)", "(3,2)", "(2,12)", "(5,2)"]
+// Output: false
+
+
+
+
+
+
+function BracketMatcher(str) { 
+    left=0
+    right=0
+    for(let i of str){
+      if(i=="("){
+        left+=1
+      }if(i==")"){
+        right+=1
+      }
+    }if(left != right){
+      return 0
+    }else{
+    // code goes here  
+    return 1 }
+  
+  }
+     
+  // keep this function call here 
+  console.log(BracketMatcher(readline()));
+
+
+  Have the function BracketCombinations(num) read num which will be an integer greater than or equal to zero, and return the number of valid combinations that can be formed with num pairs of parentheses. For example, if the input is 3, then the possible combinations of 3 pairs of parenthesis, namely: ()()(), are ()()(), ()(()), (())(), ((())), and (()()). There are 5 total combinations when the input is 3, so your program should return 5.
+Examples
+Input: 3
+Output: 5
+Input: 2
+Output: 2
+
+function BracketCombinations(num) { 
+    // By Doing sum search i found a formula that can achieve what this problem want
+    // called Catalan number (Catalan Formula)
+    // where catalan formula is ==> (2n!) / (n+1)! n!
+  
+    // first i will calculate the factorial of the num
+    let factorial = (n) => {
+      let k = 1;
+      for(var i = n; i >= 1; i--){
+        k *= i;
+      }
+      return k;
+    }
+    
+    // formula going down
+    const result = (factorial(2 * num)) / ((factorial(num + 1)) * (factorial(num)));
+    return result; 
+  }
+     
+  // keep this function call here 
+  console.log(BracketCombinations(readline()));
+  
+  Abdo0o received 15 points | Run code
+
+
+  FindIntersection(strArr) read the array of strings stored in strArr which will contain 2 elements: the first element will represent a list of comma-separated numbers sorted in ascending order, the second element will represent a second list of comma-separated numbers (also sorted). Your goal is to return a comma-separated string containing the numbers that occur in elements of strArr in sorted order. If there is no intersection, return the string false.
+Examples
+Input: ["1, 3, 4, 7, 13", "1, 2, 4, 13, 15"]
+Output: 1,4,13
+Input: ["1, 3, 9, 10, 17, 18", "1, 4, 9, 10"]
+Output: 1,9,10
+Tags
+arrayfreevideo
+ Reset Code Light ThemeEmacsVim
+JavaScript
+function FindIntersection(strArr) { 
+
+    var a = strArr[0].split(', ')
+    var b = strArr[1].split(', ')
+    var result = a.filter(x => b.find(a => a === x))
+    return result.length > 0 ? result.join(',') : 'false'
+  
+  }
+     
+  // keep this function call here 
+  console.log(FindIntersection(readline()));
