@@ -761,28 +761,39 @@ console.log(fruits.length)
 // With an n input, your output should be an array containing n-1 subarrays. Each subarray should have two elements: the left and the right side of the partition (both should be non-empty, unless the input array is empty).
 // An empty array should return an empty array: []
 
+function movingPartition(liste){
+  result=[],r=[],a=[]
+  for(i=0;i<liste.length;i++){
+ r=liste.splice(0,i+1);
+ a=liste.splice(i+1)
+ result.push(r)
+ result.push(a)
+  }return result
+}
+console.log(movingPartition([-1, -1, -1, -1]))
 
 
-function fibo(n){
-    fibbo=[1,1]
 
-    for(i=1;i<fibbo.length;i++){
-        fibbo.push(fibbo[fibbo.length - 2] + fibbo[fibbo.length - 1]);
-    }
-    return fibbo;
-  }
-  console.log(fibo(10));
+// function fibo(n){
+//     fibbo=[1,1]
+
+//     for(i=1;i<fibbo.length;i++){
+//         fibbo.push(fibbo[fibbo.length - 2] + fibbo[fibbo.length - 1]);
+//     }
+//     return fibbo;
+//   }
+//   console.log(fibo(10));
     
-// program to generate fibonacci series up to n terms
+// // program to generate fibonacci series up to n terms
 
-// take input from the user
-const number = parseInt(prompt('Enter the number of terms: '));
-let n1 = 0, n2 = 1, nextTerm;
+// // take input from the user
+// const number = parseInt(prompt('Enter the number of terms: '));
+// let n1 = 0, n2 = 1, nextTerm;
 
-console.log('Fibonacci Series:');
+// console.log('Fibonacci Series:');
 
-for (let i = 1; i <= number; i++) {
-    console.log(n1);
-    nextTerm = n1 + n2;
-    n1 = n2;
-    n2 = nextTerm;
+// for (let i = 1; i <= number; i++) {
+//     console.log(n1);
+//     nextTerm = n1 + n2;
+//     n1 = n2;
+//     n2 = nextTerm;
