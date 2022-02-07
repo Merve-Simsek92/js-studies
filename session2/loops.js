@@ -671,77 +671,118 @@ console.log(fruits.length)
 
 
 
-function BracketMatcher(str) { 
-    left=0
-    right=0
-    for(let i of str){
-      if(i=="("){
-        left+=1
-      }if(i==")"){
-        right+=1
-      }
-    }if(left != right){
-      return 0
-    }else{
-    // code goes here  
-    return 1 }
+// function BracketMatcher(str) { 
+//     left=0
+//     right=0
+//     for(let i of str){
+//       if(i=="("){
+//         left+=1
+//       }if(i==")"){
+//         right+=1
+//       }
+//     }if(left != right){
+//       return 0
+//     }else{
+//     // code goes here  
+//     return 1 }
   
-  }
+//   }
      
-  // keep this function call here 
-  console.log(BracketMatcher(readline()));
+//   // keep this function call here 
+//   console.log(BracketMatcher(readline()));
 
 
-  Have the function BracketCombinations(num) read num which will be an integer greater than or equal to zero, and return the number of valid combinations that can be formed with num pairs of parentheses. For example, if the input is 3, then the possible combinations of 3 pairs of parenthesis, namely: ()()(), are ()()(), ()(()), (())(), ((())), and (()()). There are 5 total combinations when the input is 3, so your program should return 5.
-Examples
-Input: 3
-Output: 5
-Input: 2
-Output: 2
+//   Have the function BracketCombinations(num) read num which will be an integer greater than or equal to zero, and return the number of valid combinations that can be formed with num pairs of parentheses. For example, if the input is 3, then the possible combinations of 3 pairs of parenthesis, namely: ()()(), are ()()(), ()(()), (())(), ((())), and (()()). There are 5 total combinations when the input is 3, so your program should return 5.
+// Examples
+// Input: 3
+// Output: 5
+// Input: 2
+// Output: 2
 
-function BracketCombinations(num) { 
-    // By Doing sum search i found a formula that can achieve what this problem want
-    // called Catalan number (Catalan Formula)
-    // where catalan formula is ==> (2n!) / (n+1)! n!
+// function BracketCombinations(num) { 
+//     // By Doing sum search i found a formula that can achieve what this problem want
+//     // called Catalan number (Catalan Formula)
+//     // where catalan formula is ==> (2n!) / (n+1)! n!
   
-    // first i will calculate the factorial of the num
-    let factorial = (n) => {
-      let k = 1;
-      for(var i = n; i >= 1; i--){
-        k *= i;
-      }
-      return k;
-    }
+//     // first i will calculate the factorial of the num
+//     let factorial = (n) => {
+//       let k = 1;
+//       for(var i = n; i >= 1; i--){
+//         k *= i;
+//       }
+//       return k;
+//     }
     
-    // formula going down
-    const result = (factorial(2 * num)) / ((factorial(num + 1)) * (factorial(num)));
-    return result; 
-  }
+//     // formula going down
+//     const result = (factorial(2 * num)) / ((factorial(num + 1)) * (factorial(num)));
+//     return result; 
+//   }
      
-  // keep this function call here 
-  console.log(BracketCombinations(readline()));
+//   // keep this function call here 
+//   console.log(BracketCombinations(readline()));
   
-  Abdo0o received 15 points | Run code
+//   Abdo0o received 15 points | Run code
 
 
-  FindIntersection(strArr) read the array of strings stored in strArr which will contain 2 elements: the first element will represent a list of comma-separated numbers sorted in ascending order, the second element will represent a second list of comma-separated numbers (also sorted). Your goal is to return a comma-separated string containing the numbers that occur in elements of strArr in sorted order. If there is no intersection, return the string false.
-Examples
-Input: ["1, 3, 4, 7, 13", "1, 2, 4, 13, 15"]
-Output: 1,4,13
-Input: ["1, 3, 9, 10, 17, 18", "1, 4, 9, 10"]
-Output: 1,9,10
-Tags
-arrayfreevideo
- Reset Code Light ThemeEmacsVim
-JavaScript
-function FindIntersection(strArr) { 
+//   FindIntersection(strArr) read the array of strings stored in strArr which will contain 2 elements: the first element will represent a list of comma-separated numbers sorted in ascending order, the second element will represent a second list of comma-separated numbers (also sorted). Your goal is to return a comma-separated string containing the numbers that occur in elements of strArr in sorted order. If there is no intersection, return the string false.
+// Examples
+// Input: ["1, 3, 4, 7, 13", "1, 2, 4, 13, 15"]
+// Output: 1,4,13
+// Input: ["1, 3, 9, 10, 17, 18", "1, 4, 9, 10"]
+// Output: 1,9,10
+// Tags
+// arrayfreevideo
+//  Reset Code Light ThemeEmacsVim
+// JavaScript
+// function FindIntersection(strArr) { 
 
-    var a = strArr[0].split(', ')
-    var b = strArr[1].split(', ')
-    var result = a.filter(x => b.find(a => a === x))
-    return result.length > 0 ? result.join(',') : 'false'
+//     var a = strArr[0].split(', ')
+//     var b = strArr[1].split(', ')
+//     var result = a.filter(x => b.find(a => a === x))
+//     return result.length > 0 ? result.join(',') : 'false'
   
-  }
+//   }
      
-  // keep this function call here 
-  console.log(FindIntersection(readline()));
+//   // keep this function call here 
+//   console.log(FindIntersection(readline()));
+
+
+//   Create a function to partition an array from left to right.
+
+// Examples
+// movingPartition([-1, -1, -1, -1])
+// ➞ [[[-1], [-1, -1, -1]], [[-1, -1], [-1, -1]], [[-1, -1, -1], [-1]]]
+
+// movingPartition([1, 2, 3, 4, 5])
+// ➞ [[[1], [2, 3, 4, 5]], [[1, 2], [3, 4, 5]], [[1, 2, 3], [4, 5]], [[1, 2, 3, 4], [5]]]
+
+// movingPartition([]) ➞ []
+// Notes
+// With an n input, your output should be an array containing n-1 subarrays. Each subarray should have two elements: the left and the right side of the partition (both should be non-empty, unless the input array is empty).
+// An empty array should return an empty array: []
+
+
+
+function fibo(n){
+    fibbo=[1,1]
+
+    for(i=1;i<fibbo.length;i++){
+        fibbo.push(fibbo[fibbo.length - 2] + fibbo[fibbo.length - 1]);
+    }
+    return fibbo;
+  }
+  console.log(fibo(10));
+    
+// program to generate fibonacci series up to n terms
+
+// take input from the user
+const number = parseInt(prompt('Enter the number of terms: '));
+let n1 = 0, n2 = 1, nextTerm;
+
+console.log('Fibonacci Series:');
+
+for (let i = 1; i <= number; i++) {
+    console.log(n1);
+    nextTerm = n1 + n2;
+    n1 = n2;
+    n2 = nextTerm;
