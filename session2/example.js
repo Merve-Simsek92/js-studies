@@ -52,3 +52,87 @@
 //     new Date("July 30, 2019")
 //   ) ➞ 10
 
+// 1. The username is between 4 and 25 characters.
+// 2. It must start with a letter.
+// 3. It can only contain letters, numbers, and the underscore character.
+// 4. It cannot end with an underscore character.
+
+// If the username is valid then your program should return the string true, otherwise return the string false.
+// Examples
+// Input: "aa_"
+// Output: false
+// Input: "u__hello_world123"
+// Output: true 
+
+// function username(letter){
+//      if((letter.match(/[A-Za-z]/) != null) && (letter.match(/[_]/ != null)))
+//      {
+//          return true
+//      }else{
+//          return false
+//      }
+// }
+//console.log(username("u__hello_world123"));
+// function username1(str){
+//  const letters = 'abcdefghijklmnopqrstuvwxyz'
+//   const us = '_';
+//   const nums = '01234567890';
+//   result=""
+//   if(str.length<3 || str.lenght>25){
+//       return false}
+//   if(str[(str.length-1)] !="_"){  
+//       return false}
+  
+// }
+// console.log(username1("merve"));
+// Input: x = 121
+// Output: true
+// Explanation: 121 reads as 121 from left to right and from right to left.
+// Example 2:
+
+// Input: x = -121
+// Output: false
+// Explanation: From left to right, it reads -121. From right to left, it becomes 121-. Therefore it is not a palindrome.
+// Example 3:
+
+// Input: x = 10
+// Output: false
+// Explanation: Reads 01 from right to left. Therefore it is not a palindrome.
+
+// function palindromnumber(n){
+//     result=""
+//     if(n<0){
+//         return false}
+    
+//     for(var i=String(n).length-1;i>=0;i--){
+//         result+=String(n)[i]
+
+//     }if(String(n)==result){
+//         return true
+//     }else{
+//         return false
+//     }
+
+//     }
+//     console.log(palindromnumber(10));
+//     FindIntersection(strArr) read the array of strings stored in strArr which will contain 2 elements: the first element will represent a list of comma-separated numbers sorted in ascending order, the second element will represent a second list of comma-separated numbers (also sorted). Your goal is to return a comma-separated string containing the numbers that occur in elements of strArr in sorted order. If there is no intersection, return the string false.
+// Examples
+// Input: ["1, 3, 4, 7, 13", "1, 2, 4, 13, 15"]
+// Output: 1,4,13
+// Input: ["1, 3, 9, 10, 17, 18", "1, 4, 9, 10"]
+// Output: 1,9,10
+function FindIntersection(liste){
+    first=liste[0].split(",");
+    second=liste[1].split(",")
+    result=[]
+    for(let i=0;i<first.length;i++){
+        if(second.includes(first[i])){
+            result.push(Number(first[i]))
+        }
+    }return result
+    
+
+
+    
+}
+console.log(FindIntersection(["1, 3, 4, 7, 13", "1, 2, 4, 13, 15"]));
