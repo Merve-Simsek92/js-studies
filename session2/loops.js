@@ -764,10 +764,9 @@ console.log(fruits.length)
 function movingPartition(liste){
   result=[],r=[],a=[]
   for(i=0;i<liste.length;i++){
- r=liste.splice(0,i+1);
- a=liste.splice(i+1)
- result.push(r)
- result.push(a)
+   result.push(liste[i])
+   
+ 
   }return result
 }
 console.log(movingPartition([-1, -1, -1, -1]))
